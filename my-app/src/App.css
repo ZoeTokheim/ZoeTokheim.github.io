@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Sono&display=swap');
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Sono', sans-serif;
   background-color: rgb(29, 28, 28);
   color: white;
   text-align: left;
@@ -23,7 +23,7 @@ h1 {
 }
 
 p {
-  font-size: 14px;
+  font-size: 16px;
   margin-bottom: 0px;
   margin-top: 3px;
 }

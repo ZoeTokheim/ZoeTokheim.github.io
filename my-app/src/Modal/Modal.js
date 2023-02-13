@@ -22,7 +22,7 @@ const Modal = ({ entry, setEntry, handleEntrySubmit, showModal }) => {
         "Welcome. What are you looking forward to?",
         "How are you spending your afternoon?",
       ];
-    } else if (currentTime >= 17 && currentTime < 21) {
+    } else if (currentTime >= 17 && currentTime < 24) {
       questions = [
         "Welcome. How have you spent your day?",
         "Hello and welcome. What's on your mind?",
