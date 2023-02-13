@@ -1,0 +1,15 @@
+.time-based-text li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.time-based-text li {
+    border-bottom: 1px solid white;
+    padding: 15px 0;
+}
+
+.time-based-text {
+    font-size: 12pt;
+    line-height:1.2;
+}
