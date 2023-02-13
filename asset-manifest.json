@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/lit197-digital/static/css/main.c1c991f4.css",
+    "main.js": "/lit197-digital/static/js/main.41fade1e.js",
+    "static/js/787.28cb0dcd.chunk.js": "/lit197-digital/static/js/787.28cb0dcd.chunk.js",
+    "index.html": "/lit197-digital/index.html",
+    "main.c1c991f4.css.map": "/lit197-digital/static/css/main.c1c991f4.css.map",
+    "main.41fade1e.js.map": "/lit197-digital/static/js/main.41fade1e.js.map",
+    "787.28cb0dcd.chunk.js.map": "/lit197-digital/static/js/787.28cb0dcd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c1c991f4.css",
+    "static/js/main.41fade1e.js"
+  ]
+}
