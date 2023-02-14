@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 
 const splitPhrase = (phrase) => {
-    const filterWords = ['I', 'me', 'my', 'mine', "It's", "doing"];
+    const filterWords = ['I', 'me', "I've", 'my', 'mine', "I'm", "It's", "doing"];
     return phrase
         .split(' ')
         .filter((word) => !filterWords.includes(word))
@@ -49,7 +49,7 @@ const GeneratedText = ({ phrases, name, filterRange }) => {
 
     let joinedPhrases = spacedPhrases.length < 15 ? spacedPhrases.join('') : (spacedPhrases.slice(1,14)).join('');
 
-    return <React.Fragment>{shuffledPhrases.length > 3 ? joinedPhrases : "\xa0 \xa0 reading"}</React.Fragment>;
+    return <React.Fragment>{shuffledPhrases.length >= 1 ? joinedPhrases : "\xa0 \xa0 reading"}</React.Fragment>;
 };
 
 
