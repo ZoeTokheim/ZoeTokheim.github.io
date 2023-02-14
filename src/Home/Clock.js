@@ -21,7 +21,7 @@ function Clock() {
         }
       );
     } else {
-      setLocation("Geolocation is not supported by this browser");
+      setLocation("Unable to retrieve location");
     }
 
     return () => {
