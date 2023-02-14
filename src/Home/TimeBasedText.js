@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import './TimeBasedText.css';
+import GeneratedText from "./GeneratedText";
 /* eslint-disable */
 
 const indent = <React.Fragment>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</React.Fragment>;
 
-const timeRangeText = [
+const timeRangeText = (name, entries) => [
   {
     // LATE NIGHT
     range: [0, 6],
@@ -18,18 +19,31 @@ const timeRangeText = [
         {indent}holidays.
       </React.Fragment>,
       <React.Fragment>
-        Ohio'd deem her place a brothel but she sleeps alone. <br /> <br />
+        {indent}{indent}{indent} just popping in to see
+      </React.Fragment>,
+      <React.Fragment>
+        Ohio would deem her place a brothel but she sleeps alone. <br /> <br />
         {indent} She washed her sheets three weeks ago {indent}{indent}{indent} Come to think of it, that was the same day she'd been
         laid off from her job at her uncle's friend's brother's sporting goods store because she didn't want to {indent}{indent} him but he
         wouldn't tell it that way, obviously. <br /> <br /><br /> <br />
         Her phone screen pulls her away: she has an assignment due in five hours. If she falls
         asleep now, she can sleep for four hours until her alarm goes off.
       </React.Fragment>,
+      <GeneratedText
+        phrases={entries}
+        name={name}
+        filterRange={[0, 6]}
+      />,
       <React.Fragment>
         {indent}{indent} busted <br />
         {indent}{indent}{indent}{indent}{indent}{indent}  alarm <br />
         Pat called his wife for the first time in a decade. <br />
         {indent}{indent}{indent}She answered on the third ring.
+      </React.Fragment>,
+      <React.Fragment>
+        {indent} <i>trying</i> to fall asleep but {indent} just <i> can't</i><br /><br />
+        {indent}{indent}{indent} What do you do when you've tried <i>everything</i>? <br />
+        Georgia {indent}{indent}{indent}{indent}mom said fine {indent}{indent} don't sleep
       </React.Fragment>,
       <React.Fragment>
         Quiet, Jeff and Marcy and their dog and their unborn, surrounded <br />
@@ -39,7 +53,6 @@ const timeRangeText = [
         up  {indent} {indent} last night's
         cold soup at that place downtown her brother-in-law -- the one he hasn't spoken to since their wedding -- recommended.
       </React.Fragment>,
-
     ]
   },
 
@@ -73,6 +86,11 @@ const timeRangeText = [
         {indent}{indent}&nbsp;&nbsp;&nbsp;replacements for Simone,no<i>cause for alarm</i>.<br />
         <br /><br />The son runs late, Two miles. Maybe three.<br />
       </React.Fragment>,
+      <GeneratedText
+        phrases={entries}
+        name={name}
+        filterRange={[6, 12]}
+      />,
       <React.Fragment>
         {indent}Jeff doesn’t give a shit what other Marcy thinks <br />
         {indent}{indent} he {indent}{indent}{indent}{indent} will <br />
@@ -107,6 +125,10 @@ const timeRangeText = [
         Two unread texts from Ernesto's boss grow anxious in his pocket and it
         starts raining an hour later.
 
+      </React.Fragment>,
+      <React.Fragment>
+        Here's Francine; only a couple minutes late. {indent}{indent} towards the camera <br /><br />
+        {indent} leans close {indent} today.
       </React.Fragment>,
       <React.Fragment>
         {indent} <i>relationship?</i> {indent}{indent}<i>other people?</i> He said no. Not with their
@@ -146,8 +168,13 @@ const timeRangeText = [
 
         {indent}{indent} Alicia says she has a headache. Mikaela said the same
         last week, though, so Alicia doesn't feel too bad about it.
-
-      </React.Fragment>,]
+      </React.Fragment>,
+      <GeneratedText
+        phrases={entries}
+        name={name}
+        filterRange={[12, 18]}
+      />
+    ]
   },
   //EVENING
   {
@@ -165,6 +192,11 @@ const timeRangeText = [
         <br /> <br />
         There's a space next to Marcy, who maybe isn't asleep after all but it's nice of her to pretend.
       </React.Fragment>,
+      <GeneratedText
+        phrases={entries}
+        name={name}
+        filterRange={[18, 24]}
+      />,
       <React.Fragment>
         Pat rests soundly, alone. For now his mind is quiet.
       </React.Fragment>,
@@ -179,16 +211,28 @@ const timeRangeText = [
         Scraping vanilla off plastic bowls, Ernesto {indent} hums and turns on the sink. <br />
         {indent}{indent} both children asleep, <i>a moment to rest</i>,
         {indent}{indent}{indent}{indent} he says, moving his arms and legs.
-      </React.Fragment>,]
+      </React.Fragment>,
+      <React.Fragment>
+        <i>scrolling scrolling scrolling scrolling scrolling scrolling
+          scrolling scrolling scrolling scrolling scrolling scrolling scrolling scrolling scrolling
+          pause tap scrolling scrolling scrolling scrolling scrolling scrolling
+          scrolling scrolling scrolling tap tap scrolling scrolling scrolling
+          scrolling scrolling scrolling four seconds of hyperpop scrolling scrolling
+          scrolling scrolling scrolling scrolling scrolling scrolling baby
+          laughing scrolling scrolling scrolling scrolling scrolling tap scrolling scrolling scrolling
+          scrolling scrolling scrolling scrolling scrolling scrolling scrolling
+          scrolling scrolling scrolling</i>
+      </React.Fragment>,
+    ]
   }
 ];
 
-const TimeBasedText = () => {
+const TimeBasedText = ({ name, entries }) => {
   const [currentTexts, setCurrentTexts] = useState([]);
 
   useEffect(() => {
     const currentTime = new Date().getHours();
-    const selectedTexts = timeRangeText.find(({ range }) => currentTime >= range[0] && currentTime < range[1]).texts;
+    const selectedTexts = timeRangeText(name, entries).find(({ range }) => currentTime >= range[0] && currentTime < range[1]).texts;
     setCurrentTexts(selectedTexts);
   }, []);
 
