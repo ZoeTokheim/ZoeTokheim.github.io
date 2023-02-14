@@ -49,7 +49,7 @@ const GeneratedText = ({ phrases, name, filterRange }) => {
 
     let joinedPhrases = spacedPhrases.length < 15 ? spacedPhrases.join('') : (spacedPhrases.slice(1,14)).join('');
 
-    return <React.Fragment>{phrases.length >= 1 ? joinedPhrases : "\xa0 \xa0 reading"}</React.Fragment>;
+    return <React.Fragment>{phrases.length >= 2 ? joinedPhrases : "\xa0 \xa0 reading"}</React.Fragment>;
 };
 
 
