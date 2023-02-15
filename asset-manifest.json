@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/lit197-digital-fiction/static/css/main.c991e051.css",
-    "main.js": "/lit197-digital-fiction/static/js/main.3fc9a5ca.js",
+    "main.js": "/lit197-digital-fiction/static/js/main.72bbb6fa.js",
     "static/js/787.28cb0dcd.chunk.js": "/lit197-digital-fiction/static/js/787.28cb0dcd.chunk.js",
     "index.html": "/lit197-digital-fiction/index.html",
     "main.c991e051.css.map": "/lit197-digital-fiction/static/css/main.c991e051.css.map",
-    "main.3fc9a5ca.js.map": "/lit197-digital-fiction/static/js/main.3fc9a5ca.js.map",
+    "main.72bbb6fa.js.map": "/lit197-digital-fiction/static/js/main.72bbb6fa.js.map",
     "787.28cb0dcd.chunk.js.map": "/lit197-digital-fiction/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c991e051.css",
-    "static/js/main.3fc9a5ca.js"
+    "static/js/main.72bbb6fa.js"
   ]
 }
