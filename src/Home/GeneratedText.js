@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 
 const splitPhrase = (phrase) => {
-    const filterWords = ['I', 'me', "I've", 'my', 'mine', "I'm", "It's", "doing"];
+    const filterWords = ['I', 'me', "we", "our", "I've", 'my', 'mine', "I'm", "It's", "i'm", "doing"];
     return phrase
         .split(' ')
         .filter((word) => !filterWords.includes(word))
