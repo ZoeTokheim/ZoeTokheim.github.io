@@ -44,12 +44,12 @@ const GeneratedText = ({ phrases, name, filterRange }) => {
     for (let i = 0; i < spacedPhrases.length; i++) {
         let randomLength = Math.floor(Math.random() * 10) + 1;
         separator += ' \xa0 \xa0 \xa0 \xa0 '.repeat(randomLength);
-        spacedPhrases[i] = spacedPhrases[i] + separator;
+        spacedPhrases[i] = ' \xa0' + spacedPhrases[i] + separator;
     }
 
     let joinedPhrases = spacedPhrases.length < 15 ? spacedPhrases.join('') : (spacedPhrases.slice(1,14)).join('');
 
-    return <React.Fragment>{phrases.length >= 1 ? joinedPhrases : "\xa0 \xa0 reading"}</React.Fragment>;
+    return <React.Fragment>{phrases.length >= 1 ? joinedPhrases.trimEnd() : "\xa0 \xa0 reading"}</React.Fragment>;
 };
 
 
